@@ -4,22 +4,22 @@
   become_user: root
   tasks:
   - name: Update all packages to the latest version
-    apt:
+    ansible.buitin.package:
       upgrade: dist
   - name: install tomcat
-    apt: 
+    ansible.builtin.package: 
       name: tomcat 
       state: present
   - name: start tomcat
     service: name=tomcat state=started
   - name: install docker
-    apt: 
+    ansible.builtin.package: 
       name: docker 
       state: present
   - name: start docker
     service: name=docker state=started
   - name: install git
-    apt: 
+    ansible.builtin.package: 
       name: git 
       state: present
   - name: clone a repo
