@@ -4,19 +4,19 @@
   become_user: root
   tasks:
   - name: install tomcat
-    yum: name=tomcat state=present
+    apt-get: name=tomcat state=present
   - name: start tomcat
     service: name=tomcat state=started
   - name: install docker
-    yum: name=docker state=present
+    apt-get: name=docker state=present
   - name: start docker
     service: name=docker state=started
   - name: install git
-    yum: name=git state=present
+    apt-get: name=git state=present
   - name: clone a repo
-    git: repo=https://github.com/Sonal0409/AnsibleDockerdemo.git dest=/tmp/mygitrepo1
+    git: repo= dest=/tmp/mygitrepo1
   - name: build docker file
-    command: chdir=/tmp/mygitrepo1 docker build -t myadd:ansible2 .
+    command: chdir=/tmp/mygitrepo1 docker build -t devopsedu/webapp
   - name: create container
-    command: docker run -itd -P myadd:ansible2
+    command: docker run -itd -P devopsedu/webapp
 
