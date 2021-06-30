@@ -14,7 +14,7 @@
   - name: install git
     apt-get: name=git state=present
   - name: clone a repo
-    git: repo= dest=/tmp/mygitrepo1
+    git: repo=https://github.com/abhay033/myansible1.git dest=/tmp/mygitrepo1
   - name: build docker file
     command: chdir=/tmp/mygitrepo1 docker build -t devopsedu/webapp
   - name: create container
