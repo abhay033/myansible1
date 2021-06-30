@@ -2,7 +2,7 @@
 - hosts: webservers
   become: true
   become_user: root
-  tasks:-
+  tasks:
   - name: Update all packages to the latest version
     apt:
       upgrade: dist
