@@ -3,9 +3,6 @@
   become: true
   become_user: root
   tasks:
-  - name: Update all packages to the latest version
-    ansible.builtin.package:
-      upgrade: dist
   - name: install tomcat
     ansible.builtin.package: 
       name: tomcat 
