@@ -1,1 +1,2 @@
-hi
+[webservers]
+172.31.26.61 ansible_user=edureka
