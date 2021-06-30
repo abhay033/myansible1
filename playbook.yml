@@ -4,19 +4,19 @@
   become_user: root
   tasks:
   - name: install tomcat
-    ansible.builtin.package: 
+    yum: 
       name: tomcat 
       state: present
   - name: start tomcat
     service: name=tomcat state=started
   - name: install docker
-    ansible.builtin.package: 
+    yum: 
       name: docker 
       state: present
   - name: start docker
     service: name=docker state=started
   - name: install git
-    ansible.builtin.package: 
+    yum: 
       name: git 
       state: present
   - name: clone a repo
