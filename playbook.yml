@@ -5,20 +5,20 @@
   tasks:
   - name: install tomcat
     apt: 
-    name: tomcat 
-    state: present
+      name: tomcat 
+      state: present
   - name: start tomcat
     service: name=tomcat state=started
   - name: install docker
     apt: 
-    name: docker 
-    state: present
+      name: docker 
+      state: present
   - name: start docker
     service: name=docker state=started
   - name: install git
     apt: 
-    name: git 
-    state: present
+      name: git 
+      state: present
   - name: clone a repo
     git: repo=https://github.com/abhay033/myansible1.git dest=/tmp/mygitrepo1
   - name: build docker file
