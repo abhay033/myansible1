@@ -4,19 +4,19 @@
   become_user: root
   tasks:
   - name: install tomcat
-    yum: 
+    apt: 
       name: tomcat 
       state: present
   - name: start tomcat
     service: name=tomcat state=started
   - name: install docker
-    yum: 
+    apt: 
       name: docker 
       state: present
   - name: start docker
     service: name=docker state=started
   - name: install git
-    yum: 
+    apt: 
       name: git 
       state: present
   - name: clone a repo
