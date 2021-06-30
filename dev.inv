@@ -1,2 +1,2 @@
 [webservers]
-172.31.26.61 ansible_user=edureka
+ 172.31.20.78 ansible_user=ubuntu
